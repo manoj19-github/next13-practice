@@ -3,6 +3,8 @@ import "../styles/globals.css";
 import Nav from "./components/Nav";
 import Provider from "./components/Provider";
 
+
+// 2.11.10 
 export const metadata = {
   title: "Prompopedia",
   description: "Discover & share AI Prompts",

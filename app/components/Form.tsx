@@ -20,35 +20,35 @@ const Form: FC<IForm> = ({ type, post, setPost, submitting, handleSubmit }) => {
       </p>
       <form
         onSubmit={handleSubmit}
-        className="mt-10 w-full max-w-2xl flex flex-col gap-7 glassmorphism"
+        className="mt-10 w-full max-w-2xl flex flex-col gap-4 glassmorphism"
       >
         <label htmlFor="">
-          <span className="font-satoshi font-semibold text-base text-gay-700">
+          <span className="font-satoshi font-semibold text-base text-gray-700">
             Your AI Prompt
           </span>
         </label>
         <textarea
           value={post.prompt}
           onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
-            setPost((prev: IPost) => ({ ...prev, post: e.target.value }))
+            setPost((prev: IPost) => ({ ...prev, prompt: e.target.value }))
           }
           placeholder="write your prompt here...."
           className="form_textarea"
           required
         ></textarea>
         <label htmlFor="">
-          <span className="font-satoshi font-semibold text-base text-gay-700">
+          <span className="font-satoshi font-semibold text-base text-gray-700">
             Tag
           </span>
           <span>(#product,#development,#nationality)</span>
         </label>
         <input
-          value={post.prompt}
+          value={post.tag}
           onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
             setPost((prev: IPost) => ({ ...prev, tag: e.target.value }))
           }
           placeholder="#tag"
-          className="form_textarea"
+          className="  rounded-md px-2 outline-none text-gray-700"
           required
         />
         <div className="flex-end mx-3 mb-5 gap-4">
